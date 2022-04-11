@@ -23,7 +23,7 @@ var cors = require('cors')
 
 
 // Settins
-app.set('port',8000)
+app.set('port',process.env.PORT)
 
 // Midelwares
 app.use( express.json())
