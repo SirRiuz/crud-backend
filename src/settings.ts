@@ -7,7 +7,7 @@ const multer  = require('multer')
 const SETTINGS = {
 
 	UPLOAD_BASEDIR:'uploads/',
-	DB_URL:'mongodb://localhost:27017/user',
+	DB_URL:'mongodb://database:27017/user',
 	CUSTOM_STORAGE:multer.diskStorage({
 		destination: function (req: any, _file: any, cb: any) {
 			cb(null, SETTINGS.UPLOAD_BASEDIR)

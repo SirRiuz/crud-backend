@@ -8,7 +8,7 @@ RUN npm install
 
 COPY . .
 
-RUN ls -a
+# RUN ls -a
 RUN npm install -g typescript
 RUN tsc
 

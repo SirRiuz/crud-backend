@@ -1,0 +1,16 @@
+version: '3'
+services:
+
+  backend-server:
+    container_name: backend
+    build: .
+    restart: always
+    ports:
+      - "5000:8000"
+
+
+  database:
+    container_name: mongodb
+    image: mongo
+
+    

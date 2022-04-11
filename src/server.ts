@@ -8,7 +8,13 @@ import { SETTINGS } from './settings';
 
 
 
-mongoose.connect(SETTINGS.DB_URL);
+mongoose.connect(SETTINGS.DB_URL)
+	.then(_ => {
+		console.log('Conectado')
+	})
+	.catch(_ => {
+		console.log('Error al conectar')
+	})
 
 const app = express()
 const multer  = require('multer')
@@ -23,7 +29,7 @@ var cors = require('cors')
 
 
 // Settins
-app.set('port',process.env.PORT)
+app.set('port',process.env.PORT || 8000)
 
 // Midelwares
 app.use( express.json())
